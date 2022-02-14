@@ -25,26 +25,7 @@
  * Testene i Oppgave6Test vil kjøre grønt når funksjonen er implementert riktig.
  */
 
-// Løsningsforslag oppgave 6
-
-fun State.nextState(action: Action): State = when (this) {
-    is LoggedOut -> when (action) {
-        is Submit ->
-            if (attempts >= 5) LoggedOut(attempts + 1, Reason.TooManyTries)
-            else Loading(attempts)
-        else -> throw IllegalStateException()
-    }
-    is Loading -> when (action) {
-        is Error -> LoggedOut(attempts + 1, action.reason)
-        is Success -> LoggedIn(action.userdata)
-        else -> throw IllegalStateException()
-    }
-    is LoggedIn -> when (action) {
-        is Logout -> LoggedOut()
-        else -> throw IllegalStateException()
-    }
-}
-
+fun State.nextState(action: Action): State = TODO("Skriv denne funksjonen etter kravene i beskrivelsen.")
 
 // --- Ikke endre noe nedenfor denne linjen ---
 enum class Reason {
