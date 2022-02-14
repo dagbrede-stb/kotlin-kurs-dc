@@ -1,3 +1,4 @@
+
 /**
  * Oppgave 1
  *
@@ -9,5 +10,4 @@
  * Etter du har skrevet funksjonen, åpne "Oppgave1Test" og kjør testene for å se at du har gjort det riktig.
  */
 
-// Løsningsforslag Oppgave 1:
-fun helloWorld(name: String = "world") = "Hello $name!"
+// Skriv funksjonen her.
