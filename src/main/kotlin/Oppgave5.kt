@@ -16,21 +16,13 @@
  * gi bedre lesbarhet.
  */
 
-// Løsningsforslag oppgave 5
-
-fun handleRemoteAPI(id: Int?): Response {
-    val response = id?.let(::callRemoteAPI) ?: Response(404)
-    return response.takeUnless { it.status == 500 } ?: throw Exception()
-}
+fun handleRemoteAPI(id: Int?): Response = TODO()
 
 
 /*
 // -------------- Ikke endre dette --------------
-
 Denne er definert i oppgave 2
-
 data class Response(val status: Int)
-
 var ignoreThis = 0
 fun callRemoteAPI(id: Int): Response? {
     ignoreThis++
